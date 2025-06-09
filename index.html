@@ -11,15 +11,12 @@
 
 <body>
     <main class="Container">
-        <form>
-            <h1>Login Acurax</h1>
+        <form id="loginForm"> <h1>Login Acurax</h1>
             <div class="input-box">
-                <input placeholder="Email" type="email" />
-                <i class="bx bxs-user"></i>
+                <input placeholder="Email" type="email" id="emailInput" required /> <i class="bx bxs-user"></i>
             </div>
             <div class="input-box">
-                <input placeholder="Senha" type="password" />
-                <i class="bx bxs-lock-alt"></i>
+                <input placeholder="Senha" type="password" id="passwordInput" required /> <i class="bx bxs-lock-alt"></i>
             </div>
             <div class="Lembrar-senha">
                 <label>
@@ -29,11 +26,13 @@
                 <a href="#"> Esqueci senha</a>
             </div>
             <button type="submit" class="Login">Login</button>
-            <div class="Register-link">
+            <div id="errorMessage" class="error-message"></div> <div class="Register-link">
                 <p>Não tem Login? <a href="#">Registre-se</a></p>
             </div>
         </form>
     </main>
+
+    <script src="script.js"></script>
 </body>
 
 </html>
