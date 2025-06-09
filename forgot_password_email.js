@@ -1,8 +1,9 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const loginForm = document.getElementById("loginForm");
+  const form = document.getElementById("forgotPasswordEmailForm");
   const emailInput = document.getElementById("emailInput");
-  const passwordInput = document.getElementById("passwordInput");
   const errorMessageDiv = document.getElementById("errorMessage");
+
+  const VALID_EMAIL = "teste@acurax.com";
 
   function showMessage(message, type = "error") {
     errorMessageDiv.textContent = message;
@@ -17,29 +18,24 @@ document.addEventListener("DOMContentLoaded", () => {
     errorMessageDiv.classList.remove("error-message", "success-message");
   }
 
-  loginForm.addEventListener("submit", (event) => {
+  form.addEventListener("submit", (event) => {
     event.preventDefault();
-
     clearMessage();
 
     const email = emailInput.value.trim();
-    const password = passwordInput.value.trim();
 
-    if (email === "" || password === "") {
-      showMessage("Por favor, preencha todos os campos.", "error");
+    if (email === "") {
+      showMessage("Por favor, digite seu email.", "error");
       return;
     }
 
-    const validEmail = "teste@acurax.com";
-    const validPassword = "senha123";
-
-    if (email === validEmail && password === validPassword) {
-      showMessage("Login bem-sucedido! Redirecionando...", "success");
-      // setTimeout(() => {
-      //   window.location.href = 'dashboard.html';
-      // }, 2000);
+    if (email === VALID_EMAIL) {
+      showMessage("Código enviado para o seu email!", "success");
+      setTimeout(() => {
+        window.location.href = "forgot_password_code.html";
+      }, 2000);
     } else {
-      showMessage("Email ou senha inválidos. Tente novamente.", "error");
+      showMessage("Email não encontrado em nossa base de dados.", "error");
     }
   });
 });

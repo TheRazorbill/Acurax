@@ -62,7 +62,7 @@ body {
 .Lembrar-senha {
   display: flex;
   justify-content: space-between;
-  margin: -15px 0 15px;
+  margin: 15px 0 15px;
 }
 .Lembrar-senha label input {
   accent-color: #fff;
@@ -91,7 +91,7 @@ body {
 .Login:hover {
   background-color: transparent;
   border: 2px solid rgba(255, 255, 255, 0.2);
-  columns: #fff;
+  color: #fff;
   transition: 0.5s;
 }
 .Register-link {
@@ -106,4 +106,30 @@ body {
 }
 .Register-link a:hover {
   text-decoration: underline;
+}
+
+#errorMessage {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+  font-weight: bold;
+  display: none;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+  font-size: 14px;
+  line-height: 1.5;
+  width: 100%;
+}
+
+.error-message {
+  background-color: #ffe6e6;
+  color: #cc0000;
+  border: 1px solid #cc0000;
+}
+
+.success-message {
+  background-color: #e6ffe6;
+  color: #008000;
+  border: 1px solid #008000;
 }

@@ -49,6 +49,20 @@ document.addEventListener("DOMContentLoaded", () => {
       return;
     }
 
+    const registeredEmails =
+      JSON.parse(localStorage.getItem("registeredEmails")) || [];
+
+    if (registeredEmails.includes(email)) {
+      showMessage(
+        "Este e-mail já está registrado. Por favor, use outro e-mail.",
+        "error"
+      );
+      return;
+    }
+
+    registeredEmails.push(email);
+    localStorage.setItem("registeredEmails", JSON.stringify(registeredEmails));
+
     showMessage(
       "Registro bem-sucedido! Redirecionando para a página de login...",
       "success"
