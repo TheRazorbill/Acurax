@@ -1,5 +1,8 @@
 # Acurax
 
+interface de login
+https://therazorbill.github.io/Acurax/
+
 # Acurax: O seu Guia de Compras Inteligente (Projeto em Início)
 
 Sabe quando você se sente perdido na hora de comprar algo importante? Um computador, um carro, ou até um periférico? Se você não é um especialista e a grana tá curta para o modelo mais recente, o Acurax é a solução!
