@@ -1,5 +1,3 @@
-# Acurax
-
 pagina login,register, esqueci minha senha, recuperar senha...
 
 HTML
